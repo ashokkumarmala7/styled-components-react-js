@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import {
   Heading,
-  HeadingC,
   CustomButton,
   ContainerDiv,
   ContainerBg,
@@ -10,18 +9,16 @@ import {
 import './App.css'
 
 class App extends Component {
-  
-    state = {
-    color:"#ffffff",
+  state = {
+    isDone: false,
   }
 
- onClickBtn = () => {
-    this.setState((prevState) => ({color:prevState.color==="#0070c1"})
- }
+  onClickBtn = () => {
+    this.setState(prevState => ({isDone: !prevState.isDone}))
+  }
 
-  render () {
-
-    const {color} = this.state
+  render() {
+    const {isDone} = this.state
     return (
       <>
         <ContainerDiv>
@@ -30,7 +27,7 @@ class App extends Component {
             <CustomButton type="button" onClick={this.onClickBtn}>
               Click
             </CustomButton>
-            <CustomButton type="button" outline={true}>
+            <CustomButton type="button" outline={true} isDone={isDone}>
               Click
             </CustomButton>
           </ContainerBg>

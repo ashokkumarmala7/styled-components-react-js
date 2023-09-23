@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Heading = styled.h1`
-  color: #0070c1;
+  color: ${props => (props.isDone ? '#ffffff' : '#0070c1')};
   font-family: 'Roboto';
   font-size: 15px;
 `
@@ -13,7 +13,6 @@ export const CustomButton = styled.button`
   border-radius: 4px;
   border: 2px solid #0070c1;
   background-color: ${props => (props.outline ? '#ffffff' : '#0070c1')};
-
   margin-left: 20px;
 `
 export const ContainerDiv = styled.div`
@@ -27,10 +26,6 @@ export const ContainerDiv = styled.div`
   height: 21vh;
   border-radius: 10px;
 `
-export const HeadingC = styled.h1`
-  color: ${props => (props.heading ? '#0070c1' : '#ffffff')};
-`
-
 export const ContainerBg = styled.div`
   display: flex;
   flex-direction: row;
