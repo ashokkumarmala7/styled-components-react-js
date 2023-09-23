@@ -25,9 +25,10 @@ export const ContainerDiv = styled.div`
   width: 200px;
   margin: auto;
   height: 21vh;
+  border-radius: 10px;
 `
 export const HeadingC = styled.h1`
-  color: #000000;
+  color: ${props => (props.heading ? '#0070c1' : '#ffffff')};
 `
 
 export const ContainerBg = styled.div`
