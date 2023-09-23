@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Heading = styled.h1`
-  color: ${props => (props.isDone ? '#ffffff' : '#0070c1')};
+  color: ${props => (props.isDone ? 'green' : 'black')};
   font-family: 'Roboto';
   font-size: 15px;
 `

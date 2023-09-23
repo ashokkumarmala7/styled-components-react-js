@@ -22,12 +22,12 @@ class App extends Component {
     return (
       <>
         <ContainerDiv>
-          <Heading>Hello World</Heading>
+          <Heading isDone={isDone}>Hello World</Heading>
           <ContainerBg>
             <CustomButton type="button" onClick={this.onClickBtn}>
               Click
             </CustomButton>
-            <CustomButton type="button" outline={true} isDone={isDone}>
+            <CustomButton type="button" outline={true}>
               Click
             </CustomButton>
           </ContainerBg>
